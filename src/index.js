@@ -5,5 +5,7 @@ fetch('http:localhost:3000/ramens')
 .then((data=> {
 data.forEach(ramen => {
     const img = document.createElement('img')
+    img.src = ramen.imageUrl
+    ramenMenu.appendChild(img)
 })
 }))
